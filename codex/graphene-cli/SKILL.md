@@ -19,17 +19,17 @@ Use this skill for real Graphene CLI work.
 
 ## Read these references first
 
-- For command availability: `../../shared/graphene-cli/command-surface.md`
-- For environment checks and target validation: `../../shared/graphene-cli/environment-and-preflight.md`
+- For command availability: `references/command-surface.md`
+- For environment checks and target validation: `references/environment-and-preflight.md`
 
 ## Read additional references by task
 
-- Authentication or PATs: `../../shared/graphene-cli/auth.md`
-- New project setup or runtime edits: `../../shared/graphene-cli/init-and-config.md`
-- Python dependencies or sync: `../../shared/graphene-cli/deps-and-sync.md`
-- Running code, GPU checks, or train jobs: `../../shared/graphene-cli/run-and-train.md`
-- Volume storage operations: `../../shared/graphene-cli/volume.md`
-- Errors or ambiguous state: `../../shared/graphene-cli/troubleshooting.md`
+- Authentication or PATs: `references/auth.md`
+- New project setup or runtime edits: `references/init-and-config.md`
+- Python dependencies or sync: `references/deps-and-sync.md`
+- Running code, GPU checks, or train jobs: `references/run-and-train.md`
+- Volume storage operations: `references/volume.md`
+- Errors or ambiguous state: `references/troubleshooting.md`
 
 ## Supported command families
 

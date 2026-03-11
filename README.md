@@ -10,8 +10,6 @@ Reusable Graphene CLI skills for multiple coding agents.
   - Codex skill wrapper
 - `.claude/agents/`
   - Claude Code subagent wrapper
-- `docs/`
-  - Research and planning notes
 
 ## Current model
 
@@ -21,7 +19,22 @@ This repository is optimized for:
 2. linking the Codex skill into `~/.codex/skills`
 3. using the Claude subagent directly from the cloned repo or linking it into `~/.claude/agents`
 
-It is **not yet** optimized for packaging the Codex skill as a standalone GitHub path install that excludes the shared docs directory.
+It now supports:
+
+1. local clone + symlink usage
+2. Codex wrapper packaging with bundled `references/`
+
+Planning notes and product-alignment documents live in the private Graphene repository, not here.
+
+## Updating bundled Codex references
+
+The shared docs under `shared/graphene-cli/` are the source of truth.
+
+When they change, refresh the bundled Codex copies:
+
+```bash
+./scripts/sync-codex-references.sh
+```
 
 ## Local use
 

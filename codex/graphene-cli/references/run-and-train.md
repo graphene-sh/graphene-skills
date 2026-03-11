@@ -78,7 +78,19 @@ Current run streaming includes:
 3. user stdout and stderr
 4. final timing line
 
-Do not assume detached jobs, persistent logs, or `graphene logs/status` exist yet.
+Current file behavior:
+
+1. foreground `graphene run` can sync newly created `/work` files back to the local working directory
+2. mounted volume paths are not part of local file sync; they persist through the volume itself
+3. use volumes for datasets, checkpoints, models, and durable artifacts
+
+Do not assume:
+
+1. detached jobs
+2. persistent logs
+3. `graphene logs/status`
+4. file sync after detach or reconnect
+5. conflict-safe local/remote concurrent edits on the same `/work` path
 
 ## Recommended decision rule
 

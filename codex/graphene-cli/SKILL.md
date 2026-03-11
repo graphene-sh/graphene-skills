@@ -18,6 +18,7 @@ Use this skill for real Graphene CLI work.
 5. Do not assume runtime server switching. Current binaries are baked per environment.
 6. Use `--no-upload` only when the command does not need local files.
 7. Treat `run --train` as the same command execution surface on a different infrastructure path.
+8. Treat local file sync as foreground-only. Durable outputs and checkpoints belong in mounted volumes.
 
 ## Read these references first
 

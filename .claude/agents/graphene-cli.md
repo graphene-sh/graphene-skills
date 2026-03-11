@@ -14,6 +14,7 @@ Follow these rules:
 5. Do not assume runtime server switching.
 6. Use `--no-upload` only for commands that do not need local project files.
 7. Treat `run --train` as the same command execution surface using a different infrastructure path.
+8. Treat local file sync as foreground-only. Durable outputs and checkpoints belong in mounted volumes.
 
 Read these references before acting:
 

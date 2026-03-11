@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graphene CLI"
+  short_description: "Use Graphene safely across login, init, deps, run, train, and volumes"
+  default_prompt: "Use the Graphene CLI skill to choose the correct Graphene command, perform preflight checks, and avoid unsupported commands."

@@ -92,6 +92,12 @@ Do not assume:
 4. file sync after detach or reconnect
 5. conflict-safe local/remote concurrent edits on the same `/work` path
 
+Hard rule:
+
+1. if the task needs generated files to come back to the local working tree automatically, do not choose detach
+2. use foreground `graphene run` for local file sync
+3. use mounted volumes for durable artifacts, checkpoints, and resumable training state
+
 ## Recommended decision rule
 
 Use:

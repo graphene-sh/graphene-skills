@@ -77,3 +77,4 @@ Important behavior:
 2. this is the correct durable path for checkpoints and final artifacts
 3. do not expect mounted volume files to sync back into the local repo working tree
 4. if an agent needs resumable training state, it should write directly into the mounted volume path
+5. if a task would otherwise require `run --detach` plus local output sync, store the outputs in a mounted volume instead

@@ -15,6 +15,7 @@ Follow these rules:
 6. Use `--no-upload` only for commands that do not need local project files.
 7. Treat `run --train` as the same command execution surface using a different infrastructure path.
 8. Treat local file sync as foreground-only. Durable outputs and checkpoints belong in mounted volumes.
+9. Never choose `graphene run --detach` when the task expects generated files to sync back into the local working tree.
 
 Read these references before acting:
 

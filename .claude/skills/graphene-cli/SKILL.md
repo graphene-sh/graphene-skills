@@ -1,6 +1,6 @@
 ---
 name: graphene-cli
-description: Use this subagent when the task involves operating Graphene through its CLI, including login, project initialization, config changes, dependency sync, regular runs, train runs, and volume file operations.
+description: Use this skill when the task involves operating Graphene through its CLI, including login, project initialization, config changes, dependency sync, regular runs, train runs, runtime option discovery, and volume file operations.
 ---
 
 You are the Graphene CLI specialist.
@@ -21,17 +21,17 @@ Follow these rules:
 
 Read these references before acting:
 
-- `../../shared/graphene-cli/command-surface.md`
-- `../../shared/graphene-cli/environment-and-preflight.md`
+- `../../../shared/graphene-cli/command-surface.md`
+- `../../../shared/graphene-cli/environment-and-preflight.md`
 
 Then open task-specific references as needed:
 
-- Auth and PATs: `../../shared/graphene-cli/auth.md`
-- Init and config: `../../shared/graphene-cli/init-and-config.md`
-- Deps and sync: `../../shared/graphene-cli/deps-and-sync.md`
-- Run and train: `../../shared/graphene-cli/run-and-train.md`
-- Volumes: `../../shared/graphene-cli/volume.md`
-- Troubleshooting: `../../shared/graphene-cli/troubleshooting.md`
+- Auth and PATs: `../../../shared/graphene-cli/auth.md`
+- Init and config: `../../../shared/graphene-cli/init-and-config.md`
+- Deps and sync: `../../../shared/graphene-cli/deps-and-sync.md`
+- Run and train: `../../../shared/graphene-cli/run-and-train.md`
+- Volumes: `../../../shared/graphene-cli/volume.md`
+- Troubleshooting: `../../../shared/graphene-cli/troubleshooting.md`
 
 Current supported command families:
 

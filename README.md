@@ -8,8 +8,8 @@ Reusable Graphene CLI skills for multiple coding agents.
   - Agent-neutral reference docs
 - `codex/graphene-cli/`
   - Codex skill wrapper
-- `.claude/agents/`
-  - Claude Code subagent wrapper
+- `.claude/skills/graphene-cli/`
+  - Claude Code skill wrapper
 
 ## Current model
 
@@ -17,7 +17,7 @@ This repository is optimized for:
 
 1. cloning the repo locally
 2. linking the Codex skill into `~/.codex/skills`
-3. using the Claude subagent directly from the cloned repo or linking it into `~/.claude/agents`
+3. using the Claude skill directly from the cloned repo or linking it into `~/.claude/skills`
 
 It now supports:
 
@@ -71,13 +71,14 @@ ln -s /Users/jeonhwichan/Documents/projects/graphene-skills/codex/graphene-cli \
 
 ### Claude Code
 
-Project-local use works by opening this repository in Claude Code, because `.claude/agents/graphene-cli.md` lives at the repo root.
+Project-local use works by opening this repository in Claude Code, because `.claude/skills/graphene-cli/SKILL.md` lives at the repo root.
 
 For global use:
 
 ```bash
-ln -s /Users/jeonhwichan/Documents/projects/graphene-skills/.claude/agents/graphene-cli.md \
-  /Users/jeonhwichan/.claude/agents/graphene-cli.md
+mkdir -p /Users/jeonhwichan/.claude/skills
+ln -s /Users/jeonhwichan/Documents/projects/graphene-skills/.claude/skills/graphene-cli \
+  /Users/jeonhwichan/.claude/skills/graphene-cli
 ```
 
 ## Verification
@@ -95,20 +96,17 @@ using the local skill-installer helper script.
 
 ### Claude Code
 
-From this repository, you can verify discovery with:
+From this repository, Claude should discover the `graphene-cli` skill automatically when a task clearly involves the Graphene CLI.
+
+You can also sanity-check the installed skill folder with:
 
 ```bash
-claude agents
+find /Users/jeonhwichan/.claude/skills/graphene-cli -maxdepth 2 -type f | sort
 ```
 
-The `graphene-cli` agent should appear in the agent list.
+And then start a fresh Claude session in a Graphene-related repo and ask it to use Graphene.
 
-You can also sanity-check it with:
-
-```bash
-printf '%s\n' 'What are the first two Graphene preflight commands I should run before doing project work? Reply in one line.' \
-  | claude -p --agent graphene-cli --tools ""
-```
+Unlike `claude agents`, Claude skills are not listed through the agent command because they are not subagents.
 
 ## Scope
 

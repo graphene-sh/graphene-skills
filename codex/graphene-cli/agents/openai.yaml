@@ -1,4 +1,10 @@
 interface:
   display_name: "Graphene CLI"
   short_description: "Use Graphene safely across login, init, deps, run, train, and volumes"
-  default_prompt: "Use the Graphene CLI skill to choose the correct Graphene command, perform preflight checks, and avoid unsupported commands."
+  icon_small: "./assets/graphene-cli-small.svg"
+  icon_large: "./assets/graphene-cli-large.svg"
+  brand_color: "#1F6FEB"
+  default_prompt: "Use $graphene-cli to choose the correct Graphene command, run the right preflight checks, and avoid unsupported commands."
+
+policy:
+  allow_implicit_invocation: true

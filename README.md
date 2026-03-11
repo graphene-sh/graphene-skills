@@ -40,16 +40,9 @@ When they change, refresh the bundled Codex copies:
 
 ### Codex
 
-#### Option 1: clone + symlink
+Recommended: install a real local copy, not a symlink.
 
-```bash
-ln -s /Users/jeonhwichan/Documents/projects/graphene-skills/codex/graphene-cli \
-  /Users/jeonhwichan/.codex/skills/graphene-cli
-```
-
-Restart Codex after linking.
-
-#### Option 2: install from GitHub path
+#### Install from GitHub path
 
 The Codex skill is packaged as a standalone install unit under:
 
@@ -66,6 +59,15 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 ```
 
 Restart Codex after installation.
+
+#### Development-only symlink flow
+
+Use this only while iterating locally on the skill repository itself:
+
+```bash
+ln -s /Users/jeonhwichan/Documents/projects/graphene-skills/codex/graphene-cli \
+  /Users/jeonhwichan/.codex/skills/graphene-cli
+```
 
 ### Claude Code
 

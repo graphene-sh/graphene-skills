@@ -45,6 +45,18 @@ Upload:
 graphene volume put ./model.bin checkpoints:/model.bin
 ```
 
+Large-file note:
+
+1. `graphene volume put` still uses a non-resumable single-request upload path.
+2. Files larger than 5 GiB are guarded by default.
+3. To attempt a best-effort upload for files larger than 5 GiB, use:
+
+```bash
+graphene volume put --allow-large-upload ./large-model.safetensors checkpoints:/large-model.safetensors
+```
+
+4. Agents should treat `--allow-large-upload` as risky and only use it when there is no smaller-split or alternate transfer path.
+
 Download:
 
 ```bash

@@ -1,6 +1,6 @@
 ---
 name: graphene-cli
-description: Use this skill when the task involves operating Graphene through its CLI: login, identity checks, project initialization, runtime configuration, dependency sync, regular runs, train runs, or volume file operations. Use it to choose the correct Graphene command, avoid unsupported commands, and apply the right preflight checks before execution.
+description: "Use this skill when the task involves operating Graphene through its CLI: login, identity checks, project initialization, runtime configuration, dependency sync, regular runs, train runs, or volume file operations. Use it to choose the correct Graphene command, avoid unsupported commands, and apply the right preflight checks before execution."
 ---
 
 # Graphene CLI

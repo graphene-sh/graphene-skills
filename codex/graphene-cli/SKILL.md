@@ -20,6 +20,8 @@ Use this skill for real Graphene CLI work.
 7. Treat `run --train` as the same command execution surface on a different infrastructure path.
 8. Treat local file sync as foreground-only. Durable outputs and checkpoints belong in mounted volumes.
 9. Never choose `graphene run --detach` when the task expects generated files to sync back into the local working tree.
+10. Before selecting a GPU non-interactively, prefer `graphene runtime options --json`.
+11. If runtime options imply a GPU is train-only, do not choose plain `graphene run` for that GPU.
 
 ## Read these references first
 

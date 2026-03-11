@@ -34,9 +34,20 @@ graphene init --workspace <handle>
 
 ## Runtime rule
 
-Use only GPUs that the server currently exposes through runtime options.
+Use `graphene runtime options --json` when an agent needs the current selectable GPU list in machine-readable form.
 
-Do not assume every documented GPU is available in the current environment.
+Current semantics:
+
+1. runtime options can include warm inference GPUs and train-capable GPUs
+2. entries effectively marked as `train mode only` must not be used with plain `graphene run`
+3. use `graphene run --train` for those GPU profiles
+4. do not assume every documented GPU is warm in the current inference fleet
+
+Example:
+
+```bash
+graphene runtime options --json
+```
 
 ## Config inspection
 
@@ -64,6 +75,8 @@ Direct key updates:
 
 ```bash
 graphene config set gpu t4
+graphene config set gpu l4
+graphene config set gpu h100
 graphene config set python 3.11
 graphene config set system_layer.commands "apt-get update && apt-get install -y ffmpeg"
 ```

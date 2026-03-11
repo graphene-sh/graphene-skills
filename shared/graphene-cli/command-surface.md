@@ -12,6 +12,8 @@ graphene login --api-key <token>
 graphene logout
 graphene whoami
 graphene version
+graphene runtime options
+graphene runtime options --json
 graphene api-key create <name>
 graphene api-key list
 graphene api-key revoke <id>

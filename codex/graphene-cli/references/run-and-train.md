@@ -106,7 +106,7 @@ Use:
 graphene run
 ```
 
-for normal project execution.
+for normal project execution on a GPU that is currently available in the inference fleet.
 
 Use:
 
@@ -114,4 +114,9 @@ Use:
 graphene run --train
 ```
 
-only when the job intentionally belongs on the train infrastructure path.
+when the selected GPU is effectively `train mode only`, or when the job intentionally belongs on the train infrastructure path.
+
+Hard rule for agents:
+
+1. before choosing a GPU non-interactively, prefer `graphene runtime options --json`
+2. if the selected GPU is only available for train, do not choose plain `graphene run`

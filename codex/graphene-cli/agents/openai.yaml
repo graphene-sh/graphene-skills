@@ -1,6 +1,6 @@
 interface:
   display_name: "Graphene CLI"
-  short_description: "Use Graphene safely across login, init, deps, run, train, and volumes"
+  short_description: "Graphene login, init, deps, run, train, and volumes"
   icon_small: "./assets/graphene-cli-small.svg"
   icon_large: "./assets/graphene-cli-large.svg"
   brand_color: "#1F6FEB"
